@@ -29,12 +29,12 @@ func NewAccount(client *Client) *Account {
 	return account
 }
 
-func (a *Account) Credit(ammount float64) {
-	a.Balance += ammount
+func (a *Account) Credit(amount float64) {
+	a.Balance += amount
 	a.UpdatedAt = time.Now()
 }
 
-func (a *Account) Debit(ammount float64) {
-	a.Balance -= ammount
+func (a *Account) Debit(amount float64) {
+	a.Balance -= amount
 	a.UpdatedAt = time.Now()
 }
