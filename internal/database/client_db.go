@@ -27,7 +27,6 @@ func (c *ClientDB) Get(id string) (*entity.Client, error) {
 	if err := row.Scan(&client.ID, &client.Name, &client.Email, &client.CreatedAt); err != nil {
 		return nil, err
 	}
-
 	return client, nil
 }
 
@@ -36,7 +35,6 @@ func (c *ClientDB) Save(client *entity.Client) error {
 	if err != nil {
 		return err
 	}
-
 	defer stmt.Close()
 	_, err = stmt.Exec(client.ID, client.Name, client.Email, client.CreatedAt)
 	if err != nil {

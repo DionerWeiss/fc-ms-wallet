@@ -37,6 +37,5 @@ func (h *WebClientHandler) CreateClient(w http.ResponseWriter, r *http.Request) 
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-
 	w.WriteHeader(http.StatusCreated)
 }
