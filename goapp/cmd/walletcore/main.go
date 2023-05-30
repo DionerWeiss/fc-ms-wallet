@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 
+	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/dionerweiss/fc-ms-wallet/goapp/internal/database"
 	"github.com/dionerweiss/fc-ms-wallet/goapp/internal/event"
 	"github.com/dionerweiss/fc-ms-wallet/goapp/internal/event/handler"
